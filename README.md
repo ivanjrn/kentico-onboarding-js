@@ -28,6 +28,8 @@ You won't be added as a contributor to this repository. You have to fork it to o
 Now you have everything git-related set-up and you can start developing... 
 Please, commit with reasonable commit messages (http://chris.beams.io/posts/git-commit/), you can squash your commits as well. Feel free to create new branches when developing (task-1, 2 etc.) and merge them to `develop` when you want to submit a pull request.
 
+**IMPORTANT: ** Run `npm install` and make sure you have `eslint` and `tslint` tools enabled (in File > Settings, search for keywords). The path to `eslint` and `tslint` node packages should be in `node_modules` inside of project folder.
+
 ## How to run the project 
 **tl;dr**
 ```
@@ -67,8 +69,13 @@ Refactor the application to use ReduxJS.
   
 **IMPORTANT:** preserve Immutability!
 
+## [optoinal] Task 4
+Rewrite the app to Typescript.
+Write unit tests for your Redux logic (actionCreators and reducers -- even combined).
+
 ## Coding style
-Please follow this rules while developing: 
+ESlint and TSlint are already set-up for you, so you will see all the errors and warnings in console and also in your WebStorm IDE. Please follow this rules while developing: 
  - JavaScript file names are `lowerCamelCase`
  - one React component per file, name is `UpperCamelCase`, and has `.jsx` extension
  - use `'single quotes'` instead of `"double quotes"`
+ - more Draft-specific coding rules are specified in https://kentico.atlassian.net/wiki/display/KA/04b+-+JS+Draft+Conventions+--+DRAFT

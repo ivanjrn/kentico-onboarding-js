@@ -1,4 +1,4 @@
-import './sticky-footer.css'
+import './sticky-footer.css';
 import React, { Component } from 'react';
 import List from './components/List';
 
