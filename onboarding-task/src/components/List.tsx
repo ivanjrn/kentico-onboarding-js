@@ -49,7 +49,7 @@ class List extends React.PureComponent<IListProps, undefined> {
           <table className="table table-bordered">
               <tbody>
             {items.map((guid: string, index: number) =>
-              <ListItem guid={guid} key={index} index={index} />
+              <ListItem guid={guid} key={guid} index={index} />
             )}
             <AddItem onItemAdd={this.props.onAddItem} />
             </tbody>

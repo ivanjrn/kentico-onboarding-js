@@ -6,7 +6,7 @@ import { IItemRecord } from '../models/ItemRecord';
 import { IAppState } from '../models/IAppState';
 import { Dispatch } from '../actions/Dispatch';
 
-interface IListItemProps {
+interface IListItemOwnProps {
   index: number;
   guid: string;
 }
@@ -19,7 +19,7 @@ const selectViewItem = (itemData: IItemRecord, itemFlags: IItemFlags, index: num
 });
 const memoizedSelectViewItem = memoize(selectViewItem);
 
-const mapStateToProps = (state: IAppState, ownProps: IListItemProps) => {
+const mapStateToProps = (state: IAppState, ownProps: IListItemOwnProps) => {
   const itemData = state.itemsById.get(ownProps.guid);
   const itemFlags = state.itemsFlags.get(ownProps.guid);
   const index = ownProps.index;
@@ -29,7 +29,7 @@ const mapStateToProps = (state: IAppState, ownProps: IListItemProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch, ownProps: IListItemProps) => {
+const mapDispatchToProps = (dispatch: Dispatch, ownProps: IListItemOwnProps) => {
   return {
     onToggleEditMode: () => dispatch(toggleEditMode(ownProps.guid)),
     onUpdateText: (text: string) => dispatch(updateItemText(ownProps.guid, text)),
